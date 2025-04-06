@@ -1,0 +1,27 @@
+@import '../styles/colors.css';
+
+.topic-buttons-container {
+	display: flex;
+	justify-content: center; /* Center the buttons horizontally */
+	gap: 40px; /* Increase distance between buttons */
+	margin-top: 20px; /* Add space above the buttons */
+}
+	
+.topic-button {
+	width: 120px; /* Make the button wider */
+	height: 60px; /* Make the button taller (square shape) */
+	background-color: var(--primary-color); /* Blue color */
+	color: white;
+	border: none;
+	border-radius: 15px;
+	font-size: 15px; /* Larger text size */
+	font-weight: bold; /* Make text bold */
+	cursor: pointer;
+	display: flex;
+	align-items: center; /* Center text vertically */
+	justify-content: center; /* Center text horizontally */
+}
+	
+.topic-button:hover {
+	background-color: var(--primary-hover-color) /* Darker blue on hover */
+}

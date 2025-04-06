@@ -1,0 +1,23 @@
+.heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: #337778; /* Blue header */
+    color: white;
+}
+  
+.clear-history-button {
+    background-color: #ffffff; /* Red color */
+    color: #337778;
+    border: none;
+    border-radius: 5px;
+    padding: 8px 12px;
+    font-size: 14px;
+    cursor: pointer;
+}
+  
+.clear-history-button:hover {
+    background-color: black; /* Darker red on hover */
+    color: white;
+}
