@@ -1,19 +1,13 @@
-.heading {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px;
-    background-color: #337778; /* Blue header */
-    color: white;
-}
+@import '../styles/colors.css';
   
 .clear-history-button {
-    background-color: #ffffff; /* Red color */
-    color: #337778;
+    margin-right: auto;
+    background-color: white;
+    color: var(--primary-color);
     border: none;
     border-radius: 5px;
     padding: 8px 12px;
-    font-size: 14px;
+    margin-left: 1vh;
     cursor: pointer;
 }
   

@@ -1,20 +1,24 @@
 import React, { useState } from "react";
 import ClearConfirmation from "./ClearConfirmation";
 import { useChatContext } from "../contexts/ChatContext";
+import { useTopicContext } from "../contexts/TopicContext";
+import { useVisibleContext } from "../contexts/VisibleContext";
 import "./ClearButton.css";
 
 function ClearButton() {
-	const { messages, setMessages, defaultMessage } = useChatContext();
 
-	const [isModalVisible, setIsModalVisible] = useState(false);
+	const { messages, setMessages, defaultMessage } = useChatContext();
+	const { topicSelected, setTopicSelected } = useTopicContext();
+	const { visibility, setVisibility } = useVisibleContext();
 
 	const handleClearHistory = () => {
-		setMessages(defaultMessage); // Reset messages
-		setIsModalVisible(false); // Close modal
+		setMessages(defaultMessage); // Clear existing messages
+		setTopicSelected(false); // Show topic selection buttons again
+		setVisibility(false); // Close gray screen
 	};
 
 	const handleCancel = () => {
-		setIsModalVisible(false); // Close modal without clearing
+		setVisibility(false); // Close gray screen
 	};
 
 	return (
@@ -22,17 +26,15 @@ function ClearButton() {
 			{/* Clear History Button */}
 			<button
 				className="clear-history-button"
-				onClick={() => setIsModalVisible(true)}
+				onClick={() => setVisibility(true)}
 			>
 				Clear History
 			</button>
 
-			{/* Gray Overlay */}
-			{isModalVisible && <div className="modal-overlay"></div>}
 
 			{/* Confirmation Screen */}
 			<ClearConfirmation
-				isVisible={isModalVisible}
+				isVisible={visibility}
 				onConfirm={handleClearHistory}
 				onCancel={handleCancel}
 			/>

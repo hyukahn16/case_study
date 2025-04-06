@@ -1,12 +1,15 @@
 @import "rsuite/dist/rsuite.css";
+@import '../styles/colors.css';
 
 .messages-container {
+	max-height: calc(100vh - 80px);
 	max-width: 700px;
 	margin: 20px auto;
 	border: 1px solid white;
 	padding: 10px;
 	padding-top: 60px;
 	background-color: white;
+	overflow: auto;
   }
   
 .user-message-container,
@@ -42,15 +45,15 @@
 }
 
 .user-message {
-	align-self: flex-end; /* Align user messages to the right */
-	background-color: #337778; /* Dark blue background */
-	color: #ffffff; /* White text */
+	align-self: flex-end; /* Align user messages right */
+	background-color: var(--primary-color);
+	color: white;
 }
   
 .assistant-message {
-	align-self: flex-start; /* Center assistant messages horizontally */
-	color: #000000; /* Black text */
-	outline: 2px solid #337778;
+	align-self: flex-start; /* Align assistant messages left */
+	color: black;
+	outline: 2px solid var(--primary-color);
 	box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
 	border-radius: 15px;
 	min-height: 30px;
@@ -70,7 +73,6 @@
 	border-top: 1px solid #ccc;
 	background: white;
 	position: fixed;
-	/* width: calc(100% - 40px); */
 }
 
 .input-area textarea {
@@ -79,7 +81,7 @@
 	padding: 10px;
 	border-radius: 15px;
 	border: 1px solid #ccc;
-	outline: 2px solid #337778;
+	outline: 2px solid var(--primary-color);
 	resize: none;
 	overflow-y: auto;
 	min-height: 200px;
@@ -99,7 +101,7 @@
 	padding: 10px 20px;
 	border: none;
 	border-radius: 15px;
-	background-color: #337778;
+	background-color: var(--primary-color);
 	color: white;
 	cursor: pointer;
 	font-size: 13px;

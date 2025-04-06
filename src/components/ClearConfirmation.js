@@ -6,9 +6,6 @@ const ClearConfirmation = ({ isVisible, onConfirm, onCancel }) => {
 
   return (
     <>
-    {/* Gray Overlay */}
-    <div className="modal-overlay"></div>
-
 	{/* Clear Confirmation Screen */}
     <div className="modal-overlay">
 		<div className="modal-content">

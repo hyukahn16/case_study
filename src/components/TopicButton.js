@@ -2,7 +2,6 @@ import { useTopicContext } from "../contexts/TopicContext";
 import { useChatContext } from "../contexts/ChatContext";
 import "./TopicButton.css";
 
-
 function TopicButton() {
 
     const { messages, setMessages } = useChatContext();

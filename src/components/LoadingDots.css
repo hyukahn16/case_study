@@ -1,3 +1,5 @@
+@import '../styles/colors.css';
+
 .loading-dots {
     display: flex;
     justify-content: center;
@@ -11,7 +13,7 @@
     width: 5px; /* Size of the dots */
     height: 5px; /* Size of the dots */
     margin: 0 5px; /* Space between dots */
-    background-color: #337778; /* Customize dot color */
+    background-color: var(--primary-color); /* Customize dot color */
     border-radius: 100%; /* Make dots circular */
     animation: bounce 0.6s infinite alternate;
 }
